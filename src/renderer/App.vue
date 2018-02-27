@@ -7,7 +7,7 @@
                 <md-tab id="tab-posts" md-label="Posts"></md-tab>
                 <md-tab id="tab-favorites" md-label="Favorites"></md-tab>
             </md-tabs>
-            <button type="button" class="minButton md-button md-icon-button md-theme-dark">
+            <button type="button" class="minButton md-button md-icon-button md-theme-default">
                 <div class="md-ripple">
                     <div class="md-button-content">
                         <i class="md-icon">remove</i>
@@ -17,7 +17,7 @@
                 </span>
                 </div>
             </button>
-            <button type="button" class="exitButton md-button md-icon-button md-theme-dark">
+            <button type="button" class="exitButton md-button md-icon-button md-theme-default">
                 <div class="md-ripple">
                     <div class="md-button-content">
                         <i class="md-icon">clear</i>
