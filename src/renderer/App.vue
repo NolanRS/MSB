@@ -1,6 +1,34 @@
 <template>
     <div id="app" class="app">
-        <router-view></router-view>
+        <div class="navbar-header">
+            <md-tabs class="md-transparent md-primary" md-alignment="fixed">
+                <md-tab id="home" md-label="Home" to="/components/tabs/LandingPage"></md-tab>
+                <md-tab id="mixed" md-label="Mixed" to="/components/tabs/MixedSetPage"></md-tab>
+                <md-tab id="tab-posts" md-label="Posts"></md-tab>
+                <md-tab id="tab-favorites" md-label="Favorites"></md-tab>
+            </md-tabs>
+            <button type="button" class="minButton md-button md-icon-button md-theme-dark">
+                <div class="md-ripple">
+                    <div class="md-button-content">
+                        <i class="md-icon">remove</i>
+                    </div>
+                    <span>
+                    <span class="md-ripple-wave" style="top: -3.42188px; left:6px; width:32px; height: 32px;"></span>
+                </span>
+                </div>
+            </button>
+            <button type="button" class="exitButton md-button md-icon-button md-theme-dark">
+                <div class="md-ripple">
+                    <div class="md-button-content">
+                        <i class="md-icon">clear</i>
+                    </div>
+                    <span>
+                    <span class="md-ripple-wave" style="top: -3.42188px; left:6px; width:32px; height: 32px;"></span>
+                </span>
+                </div>
+            </button>
+        </div>
+
     </div>
 </template>
 
@@ -26,7 +54,41 @@
     .app {
         height: 100%;
         overflow: hidden;
+    }
 
+    div.navbar-header {
+        width: 90%;
+    }
+
+    .exitButton {
+        position: absolute;
+        top: 4px;
+        right: 0;
+        z-index: 1000;
+    }
+
+    .minButton {
+        position: absolute;
+        top: 4px;
+        right: 5%;
+        z-index: 1000;
+    }
+
+    .md-icon-button {
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+        margin: 0 6px
+    }
+
+    .md-icon-button.md-dense {
+        width: 32px;
+        min-width: 32px;
+        height: 32px
+    }
+
+    .md-icon-button .md-ripple-enter-active {
+        transition-duration: 1.2s
     }
 </style>
 

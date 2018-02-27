@@ -6,17 +6,14 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/home',
       name: 'mixed-set-page',
       component: require('@/components/MixedSetPage').default
-    },{
-        path: '/',
+    },
+      {
+        path: '/mixed',
           name:'landing-page',
           component: require('@/components/LandingPage').default
       },
-    {
-      path: '*',
-      redirect: '/mixed-set-page'
-    }
   ]
 })

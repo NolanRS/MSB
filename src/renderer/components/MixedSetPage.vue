@@ -1,7 +1,6 @@
 <template>
-   <mixed-set-info>
-   </mixed-set-info>
-</template>
+ <mixed-set-info></mixed-set-info>
+ </template>
 
 <script>
     import MixedSetInfo from './MixedSetPage/MixedSetInfo'
