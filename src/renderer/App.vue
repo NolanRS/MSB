@@ -1,14 +1,12 @@
 <template>
     <div id="app" class="app">
-            <md-tabs md-sync-route class="md-transparent md-primary md-sync-route" md-alignment="fixed">
-                <md-tab id="home" md-label="Home" to="/components/LandingPage"></md-tab>
-                <md-tab id="mixed" md-label="Mixed" to="/components/MixedSetPage">
-                    Mixed Page
-                </md-tab>
-                <md-tab id="tab-posts" md-label="Posts"></md-tab>
-                <md-tab id="tab-favorites" md-label="Favorites"></md-tab>
+        <div class="navbar-header">
+            <md-tabs class="md-transparent md-primary md-sync-route" md-alignment="fixed">
+                <md-tab id="home" md-label="Search" to="/home"></md-tab>
+                <md-tab id="mixed" md-label="Mixed" to="/mixed"></md-tab>
+                <md-tab id="tab-posts" md-label="Auto" to="/auto"></md-tab>
             </md-tabs>
-            </div>
+
             <button type="button" class="minButton md-button md-icon-button md-theme-default">
                 <div class="md-ripple">
                     <div class="md-button-content">
@@ -29,22 +27,20 @@
                 </span>
                 </div>
             </button>
+        </div>
+        <router-view></router-view>
+    </div>
 </template>
 
 <script>
     export default {
-        name: 'msb'
+        name: 'msb',
     }
 </script>
 
 <style lang="scss">
     /* CSS */
     @import url('//fonts.googleapis.com/css?family=Roboto:400,500,700,400italic|Material+Icons');
-
-    * {
-        margin: 0;
-        padding: 0;
-    }
 
     html, body {
         height: 100%;
@@ -63,14 +59,12 @@
         position: absolute;
         top: 4px;
         right: 0;
-        z-index: 1000;
     }
 
     .minButton {
         position: absolute;
         top: 4px;
         right: 5%;
-        z-index: 1000;
     }
 
     .md-icon-button {
@@ -89,29 +83,9 @@
     .md-icon-button .md-ripple-enter-active {
         transition-duration: 1.2s
     }
+
 </style>
 
 <style lang="scss" scoped>
 
-    .container {
-        min-height: 100%;
-        padding-top: 64px;
-        display: flex;
-        flex-direction: column;
-        font-family: "Roboto Mono", monospace;
-        transition-property: padding-top;
-    }
-
-    .container-wrapper {
-        &:not(.splash) {
-            flex: 1;
-            padding-left: 230px !important;
-        }
-    }
-
-    .main-container {
-        flex: 1;
-        position: relative;
-        z-index: 1;
-    }
 </style>
