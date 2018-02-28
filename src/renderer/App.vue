@@ -7,7 +7,7 @@
                 <md-tab id="tab-posts" md-label="Auto" to="/auto"></md-tab>
             </md-tabs>
 
-            <button type="button" class="minButton md-button md-icon-button md-theme-default">
+            <button type="button" id="minimize" class="minButton md-button md-icon-button md-theme-default">
                 <div class="md-ripple">
                     <div class="md-button-content">
                         <i class="md-icon">remove</i>
@@ -17,7 +17,7 @@
                 </span>
                 </div>
             </button>
-            <button type="button" class="exitButton md-button md-icon-button md-theme-default">
+            <button type="button" id="exit" class="exitButton md-button md-icon-button md-theme-default">
                 <div class="md-ripple">
                     <div class="md-button-content">
                         <i class="md-icon">clear</i>
@@ -33,8 +33,12 @@
 </template>
 
 <script>
+
     export default {
         name: 'msb',
+        methods: {
+
+        },
     }
 </script>
 
@@ -44,11 +48,23 @@
 
     html, body {
         height: 100%;
+        -ms-overflow-style: scrollbar;
+        -webkit-app-region:drag;
     }
 
     .app {
         height: 100%;
         overflow: hidden;
+    }
+    .main-container {
+        width:100vw;
+        height:91vh;
+        -webkit-app-region:no-drag;
+    }
+
+    .md-content {
+        width:100vw;
+        height:91vh;
     }
 
     div.navbar-header {
