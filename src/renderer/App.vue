@@ -1,12 +1,14 @@
 <template>
     <div id="app" class="app">
-        <div class="navbar-header">
-            <md-tabs class="md-transparent md-primary" md-alignment="fixed">
-                <md-tab id="home" md-label="Home" to="/components/tabs/LandingPage"></md-tab>
-                <md-tab id="mixed" md-label="Mixed" to="/components/tabs/MixedSetPage"></md-tab>
+            <md-tabs md-sync-route class="md-transparent md-primary md-sync-route" md-alignment="fixed">
+                <md-tab id="home" md-label="Home" to="/components/LandingPage"></md-tab>
+                <md-tab id="mixed" md-label="Mixed" to="/components/MixedSetPage">
+                    Mixed Page
+                </md-tab>
                 <md-tab id="tab-posts" md-label="Posts"></md-tab>
                 <md-tab id="tab-favorites" md-label="Favorites"></md-tab>
             </md-tabs>
+            </div>
             <button type="button" class="minButton md-button md-icon-button md-theme-default">
                 <div class="md-ripple">
                     <div class="md-button-content">
@@ -27,9 +29,6 @@
                 </span>
                 </div>
             </button>
-        </div>
-
-    </div>
 </template>
 
 <script>
