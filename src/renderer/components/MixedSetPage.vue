@@ -18,10 +18,6 @@
             menuVisible: true,
             boolean: false,
             selectedSkills: null,
-            skills: [
-                "Fortify",
-                "Attack"
-            ],
         }),
         methods: {
             toggleMenu() {
