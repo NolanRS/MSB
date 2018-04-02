@@ -42,15 +42,15 @@
                 <img class="hunter" src="../../assets/huntersill.png">
             </div>
         </md-content>
-        <div class="skillList">
-            <md-list>
-                <md-list-item>
-                    <md-checkbox v-model="notification" value="sound"/>
-                    <span class="md-list-item-text">Sound</span>
-                </md-list-item>
-            </md-list>
-        </div>
+        <md-content class="skillList">
+                <md-list class="skill-item" v-for="skill in skills">
+                    <md-list-item>
+                        <span>{{skill.Levels}}</span>
+                    </md-list-item>
+                </md-list>
+        </md-content>
     </div>
+
     </body>
 </template>
 
@@ -62,19 +62,37 @@
                 {"Name": "Fortify", "Levels": 1},
                 {"Name": "Attack", "Levels": 7},
             ],
-        })
-    }
+            armor: [
+                {"Name": "Kutku", "Skill1": "Attack 3", "Skill2": "Defense 3"}
+            ]
+        }),
+        created() {
+        let vm = this;
+        _.each(vm.days, (item, key) => {
+
+            vm.$set(vm.available_block_for_bids, key, []);
+
+        });
+        }
+    };
 </script>
 
 <style lang="scss" scoped>
+    .body{
+        width:100%;
+        height: 100%;
+    }
+    .boxes{
+        width: 50%;
+        height: inherit;
+        max-height: 100%;
+        display: inline-block;
 
-    .main-container{
     }
     .md-card-armor {
         width: 80px;
         height: 80px;
         opacity: .5;
-        z-index: 100;
     }
 
     .hunter {
@@ -87,10 +105,9 @@
     .character {
         width: 100vw;
         height: 91vh;
-        vertical-align: top;
         position: absolute;
         top: 0%;
-        left: 22.5%;
+        left: 7%;
     }
 
     .head-card {
@@ -109,7 +126,7 @@
     }
 
     .gloves-card {
-        left: 40%;
+        left: 50%;
         top: 3%;
         vertical-align: top;
         border-radius: 50%;
@@ -127,5 +144,11 @@
         left: 31.5%;
         border-radius: 50%;
 
+    }
+    .skillList{
+        float: right;
+        width: 50%;
+        top: 0%;
+        display: inline-block;
     }
 </style>
